@@ -2,7 +2,7 @@
 
 ## 项目概述
 
-`dify-plugins-conver-file` 是一个基于 Dify 平台的 **文件转换插件**，用于在 Dify 工作流中实现多种文档格式之间的相互转换。插件目前已实现的转换功能包括：
+`dify-plugins-conver-file` 是一个基于 Dify 平台的 **格式转换插件**，用于在 Dify 工作流中实现多种文档格式之间的相互转换。插件目前已实现的转换功能包括：
 - Markdown → PDF
 - Markdown → DOCX
 - Markdown → PPTX
