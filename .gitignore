@@ -1,0 +1,6 @@
+######################################################################
+# Build Tools
+
+__pycache__
+.test_plugin.py
+provider/__pycache__

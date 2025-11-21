@@ -1,0 +1,40 @@
+identity:
+  name: convert_md_to_pptx
+  author: antigravity
+  label:
+    en_US: Convert Markdown to PPTX
+    zh_Hans: Markdown 转 PPTX
+description:
+  human:
+    en_US: Convert Markdown content to a PowerPoint PPTX file.
+    zh_Hans: 将 Markdown 内容转换为 PowerPoint PPTX 文件。
+  llm:
+    A tool that converts Markdown text into a Microsoft PowerPoint PPTX file. Use this when the user wants to save or download Markdown content as a presentation.
+parameters:
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Markdown Content
+      zh_Hans: Markdown 内容
+    human_description:
+      en_US: The Markdown text to convert.
+      zh_Hans: 要转换的 Markdown 文本。
+    llm_description:
+      The Markdown content to be converted to PPTX.
+    form: llm
+  - name: filename
+    type: string
+    required: false
+    label:
+      en_US: Filename
+      zh_Hans: 文件名
+    human_description:
+      en_US: The name of the output PPTX file (without extension).
+      zh_Hans: 输出 PPTX 文件的名称（不带扩展名）。
+    llm_description:
+      The desired filename for the output PPTX.
+    form: llm
+extra:
+  python:
+    source: tools/convert_md_to_pptx.py
