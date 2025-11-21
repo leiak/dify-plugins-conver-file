@@ -1,0 +1,40 @@
+identity:
+  name: convert_md_to_html
+  author: antigravity
+  label:
+    en_US: Convert Markdown to HTML
+    zh_Hans: Markdown 转 HTML
+description:
+  human:
+    en_US: Convert Markdown content to a beautiful HTML file.
+    zh_Hans: 将 Markdown 内容转换为美观的 HTML 文件。
+  llm:
+    A tool that converts Markdown text into a styled HTML file. Use this when the user wants to publish or view Markdown content as a web page.
+parameters:
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Markdown Content
+      zh_Hans: Markdown 内容
+    human_description:
+      en_US: The Markdown text to convert.
+      zh_Hans: 要转换的 Markdown 文本。
+    llm_description:
+      The Markdown content to be converted to HTML.
+    form: llm
+  - name: filename
+    type: string
+    required: false
+    label:
+      en_US: Filename
+      zh_Hans: 文件名
+    human_description:
+      en_US: The name of the output HTML file (without extension).
+      zh_Hans: 输出 HTML 文件的名称（不带扩展名）。
+    llm_description:
+      The desired filename for the output HTML.
+    form: llm
+extra:
+  python:
+    source: tools/convert_md_to_html.py

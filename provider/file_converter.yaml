@@ -1,0 +1,21 @@
+identity:
+  author: tedfang
+  name: file_converter
+  label:
+    en_US: File Converter
+    zh_Hans: 文件转换工具
+  description:
+    en_US: Convert files between different formats.
+    zh_Hans: 在不同格式之间转换文件。
+  icon: icon.svg
+  tags:
+    - productivity
+tools:
+  - tools/convert_md_to_pdf.yaml
+  - tools/convert_md_to_docx.yaml
+  - tools/convert_md_to_pptx.yaml
+  - tools/convert_md_to_txt.yaml
+  - tools/convert_md_to_html.yaml
+extra:
+  python:
+    source: provider/file_converter.py

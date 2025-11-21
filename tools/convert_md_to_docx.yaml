@@ -1,0 +1,40 @@
+identity:
+  name: convert_md_to_docx
+  author: antigravity
+  label:
+    en_US: Convert Markdown to DOCX
+    zh_Hans: Markdown 转 DOCX
+description:
+  human:
+    en_US: Convert Markdown content to a DOCX file.
+    zh_Hans: 将 Markdown 内容转换为 DOCX 文件。
+  llm:
+    A tool that converts Markdown text into a Microsoft Word DOCX file. Use this when the user wants to save or download Markdown content as a Word document.
+parameters:
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Markdown Content
+      zh_Hans: Markdown 内容
+    human_description:
+      en_US: The Markdown text to convert.
+      zh_Hans: 要转换的 Markdown 文本。
+    llm_description:
+      The Markdown content to be converted to DOCX.
+    form: llm
+  - name: filename
+    type: string
+    required: false
+    label:
+      en_US: Filename
+      zh_Hans: 文件名
+    human_description:
+      en_US: The name of the output DOCX file (without extension).
+      zh_Hans: 输出 DOCX 文件的名称（不带扩展名）。
+    llm_description:
+      The desired filename for the output DOCX.
+    form: llm
+extra:
+  python:
+    source: tools/convert_md_to_docx.py

@@ -1,0 +1,40 @@
+identity:
+  name: convert_md_to_txt
+  author: antigravity
+  label:
+    en_US: Convert Markdown to TXT
+    zh_Hans: Markdown 转 TXT
+description:
+  human:
+    en_US: Convert Markdown content to a plain text file.
+    zh_Hans: 将 Markdown 内容转换为纯文本文件。
+  llm:
+    A tool that converts Markdown text into a plain text file, stripping Markdown formatting. Use this when the user wants to save content as a simple text file.
+parameters:
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Markdown Content
+      zh_Hans: Markdown 内容
+    human_description:
+      en_US: The Markdown text to convert.
+      zh_Hans: 要转换的 Markdown 文本。
+    llm_description:
+      The Markdown content to be converted to TXT.
+    form: llm
+  - name: filename
+    type: string
+    required: false
+    label:
+      en_US: Filename
+      zh_Hans: 文件名
+    human_description:
+      en_US: The name of the output TXT file (without extension).
+      zh_Hans: 输出 TXT 文件的名称（不带扩展名）。
+    llm_description:
+      The desired filename for the output TXT.
+    form: llm
+extra:
+  python:
+    source: tools/convert_md_to_txt.py
