@@ -2,6 +2,5 @@
 # Build Tools
 
 __pycache__
-.env
 .test_plugin.py
 provider/__pycache__
